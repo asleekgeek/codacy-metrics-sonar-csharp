@@ -1,12 +1,14 @@
 version: 2
 updates:
-- package-ecosystem: nuget
-  directory: "/"
-  schedule:
-    interval: daily
-    timezone: Europe/Lisbon
-  open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: SonarAnalyzer.CSharp
-    versions:
-    - 8.17.0.26580
+  - package-ecosystem: nuget
+    directory: "/"
+    schedule:
+      interval: daily
+      timezone: Europe/Lisbon
+    open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: SonarAnalyzer.CSharp
+        versions:
+          - 8.17.0.26580
+    cooldown:
+      default-days: 7
